@@ -1,0 +1,547 @@
+// Google Font Link Start
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+// Google Font Link End
+// Font Setup Start
+@mixin font_family($weight) {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+}
+$Global_color: #06c167;
+// Font Setup End
+// Universal Setup start
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  ul,
+  li,
+  a {
+    text-decoration: none;
+    list-style-type: none;
+  }
+}
+// Universal Setup End
+// Container Setup Start
+.container {
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  margin: 0 auto;
+  padding: 20px; /* Adjust the padding as needed */
+}
+// Container Setup End
+// Header Section Start
+header {
+  background-color: #f3fcf7;
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 32px;
+      @include font_family(500);
+      text-transform: capitalize;
+      color: $Global_color;
+    }
+    .menu {
+      ul {
+        li {
+          float: left;
+          a {
+            text-transform: capitalize;
+            padding: 5px 20px;
+            display: block;
+            @include font_family(400);
+            font-size: 1rem;
+            color: black;
+            position: relative;
+
+            &:focus {
+              color: $Global_color;
+              &::after {
+                content: ".";
+                position: absolute;
+                bottom: -15px;
+                left: 40px;
+                color: $Global_color;
+                font-size: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Header Section End
+// Hero Section Start
+.hero_bg {
+  background-color: #f3fcf7;
+}
+.hero_section {
+  display: flex;
+  justify-content: space-between;
+  height: 550px;
+
+  .content_side {
+    width: 533px;
+    h1 {
+      @include font_family(600);
+      font-size: 75px;
+      line-height: 90px;
+      margin-top: 50px;
+      text-transform: capitalize;
+    }
+    p {
+      color: gray;
+      font-size: 1rem;
+      padding: 20px 0;
+      @include font_family(400);
+    }
+    .get_started {
+      width: 200px;
+      height: 68px;
+      @include font_family(400);
+      font-size: 1rem;
+      border: none;
+      background-color: $Global_color;
+      color: white;
+      text-transform: capitalize;
+    }
+    .clint {
+      img[alt="BrandLogo"] {
+        margin-top: 200px;
+      }
+    }
+  }
+
+  .img-side {
+    text-align: center;
+    position: relative;
+    img[alt="hero_img"] {
+      margin-top: 50px;
+    }
+    img[alt="Ratings"] {
+      position: absolute;
+      top: 293px;
+      left: -110px;
+    }
+    img[alt="GoodQualityProduct"] {
+      position: absolute;
+      top: 160px;
+      right: -85px;
+    }
+    img[alt="Polcadot"] {
+      position: absolute;
+      bottom: -215px;
+      right: -50px;
+    }
+  }
+}
+// Hero Section End
+// Features Start
+.features {
+  margin-top: 293px;
+
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #70707046;
+  .vector {
+    display: grid;
+    grid-template-columns: 90px 130px;
+    align-items: center;
+    .vector_content {
+      @include font_family(400);
+      p {
+        &:first-child {
+          font-size: 18px;
+        }
+        &:last-child {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+// Features End
+// Benefit Start
+.benefit {
+  height: 608px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 90px;
+  align-items: center;
+  .image_benefit {
+    width: 541px;
+    height: 100%;
+    background-color: #f3fafb;
+    img {
+      width: 445px;
+      margin-left: 50px;
+    }
+  }
+  .benefit_content {
+    position: relative;
+    p {
+      @include font_family(500);
+      font-size: 15px;
+    }
+    h2 {
+      @include font_family(500);
+      font-size: 60px;
+      line-height: 72px;
+      padding-bottom: 20px;
+    }
+    img[alt="benefit_polcadot"] {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+    }
+    ul {
+      li {
+        padding: 5px;
+        a {
+          i {
+            padding-right: 15px;
+            color: $Global_color;
+            font-weight: 700;
+          }
+          color: black;
+          @include font_family(400);
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+// Benefit End
+//Our Stars Start
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  height: 610px;
+  margin-top: 80px;
+  position: relative;
+  .image_stars {
+    height: 100%;
+    background-color: #f3fafb;
+    width: 40%;
+    text-align: end;
+    img[alt="stars"] {
+      height: 450px;
+    }
+  }
+  .stars_content {
+    img[alt="stars_polcadot"] {
+      position: absolute;
+      top: 150px;
+      left: 30px;
+      z-index: -1;
+    }
+    p {
+      @include font_family(500);
+      font-size: 1rem;
+    }
+    h2 {
+      @include font_family(500);
+      font-size: 60px;
+      line-height: 73px;
+      padding-bottom: 75px;
+    }
+    .counter {
+      display: grid;
+      grid-template-columns: 150px 190px 150px;
+      margin-bottom: 30px;
+
+      .counter_content1,
+      .counter_content2,
+      .counter_content3 {
+        text-align: center;
+        p {
+          &:first-child {
+            @include font_family(600);
+            font-size: 40px;
+            color: $Global_color;
+          }
+          &:last-child {
+            @include font_family(400);
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.promo_btn {
+  width: 233px;
+  height: 79px;
+  font-size: 1rem;
+  @include font_family(400);
+  border: none;
+  background-color: $Global_color;
+  color: white;
+}
+//Our Stars End
+// Verity Start
+.variety {
+  margin: 50px auto;
+
+  p {
+    @include font_family(500);
+    font-size: 1rem;
+    text-align: center;
+  }
+  h2 {
+    @include font_family(500);
+    font-size: 60px;
+    text-align: center;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 293px 293px 293px 293px;
+    margin-top: 50px;
+    .blog {
+      padding: 15px 0;
+      background-color: #f3fcf7;
+      border: 1px solid #7cdeaf;
+      border-collapse: collapse;
+
+      h2 {
+        @include font_family(500);
+        font-size: 32px;
+        text-align: start;
+        padding: 15px 0;
+        margin-left: 30px;
+      }
+      p {
+        @include font_family(400);
+        font-size: 1rem;
+        margin-left: 30px;
+        padding-bottom: 15px;
+        text-align: start;
+      }
+      .blog_btn {
+        width: 148px;
+        height: 42px;
+        color: #06c167;
+        border: none;
+        background-color: #e6f9f0;
+        margin-left: 30px;
+      }
+    }
+  }
+}
+img[alt="img_blog"] {
+  width: 100%;
+  height: 100%;
+}
+// Verity End
+// Product Start
+.product {
+  p {
+    @include font_family(500);
+    font-size: 1rem;
+  }
+  h2 {
+    @include font_family(500);
+    font-size: 60px;
+    margin-bottom: 45px;
+  }
+  .product_item {
+    display: grid;
+    grid-template-columns: 270px 270px 270px 270px;
+    text-align: center;
+    justify-content: space-around;
+
+    .item {
+      padding: 15px 0;
+      border: 1px solid #e1e1e1;
+      &:hover {
+        border: 1px solid $Global_color;
+      }
+      box-shadow: 0px 0px 10px 2px #eaeaea;
+      ul {
+        margin-left: 95px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+
+        li {
+          float: left;
+          text-align: center;
+          color: $Global_color;
+        }
+      }
+      h4 {
+        clear: left;
+        padding-top: 10px;
+        @include font_family(400);
+        font-size: 20px;
+      }
+      .cost {
+        clear: left;
+        padding: 15px 0;
+        del {
+          padding-right: 5px;
+          color: gray;
+        }
+        p {
+          color: $Global_color;
+        }
+      }
+      .buy {
+        width: 177px;
+        height: 57px;
+        border: 1px solid $Global_color;
+        background-color: transparent;
+        color: $Global_color;
+      }
+    }
+  }
+}
+// Product End
+// veggie Start
+.veggie {
+  background-image: url(/img/veigge.png);
+  background-position: center;
+  background-size: cover;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  margin: 150px auto;
+  align-items: center;
+  h2 {
+    @include font_family(600);
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    margin-top: 10%;
+  }
+  .started {
+    width: 200px;
+    height: 68px;
+    @include font_family(400);
+    font-size: 1rem;
+    border: none;
+    background-color: $Global_color;
+    color: white;
+    text-transform: capitalize;
+    margin-top: 20px;
+  }
+}
+// veggie End
+// Footer start
+footer {
+  .footer_content {
+    display: flex;
+    justify-content: space-evenly;
+    .intro_footer {
+      h4 {
+        @include font_family(500);
+        font-size: 32px;
+        text-transform: capitalize;
+        color: $Global_color;
+        padding-bottom: 30px;
+      }
+      p {
+        @include font_family(400);
+        font-size: 1rem;
+        width: 250px;
+        padding-bottom: 20px;
+      }
+      ul {
+        li {
+          float: left;
+          a {
+            padding: 0 10px;
+            color: black;
+          }
+        }
+      }
+    }
+    .about_us {
+      padding: 0 25px;
+      h2 {
+        @include font_family(500);
+        font-size: 24px;
+        padding-bottom: 20px;
+      }
+      ul {
+        li {
+          padding: 5px;
+          a {
+            color: black;
+            @include font_family(400);
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .company {
+      padding: 0 25px;
+      h2 {
+        @include font_family(500);
+        font-size: 24px;
+        padding-bottom: 20px;
+      }
+      ul {
+        li {
+          padding: 5px;
+          a {
+            color: black;
+            @include font_family(400);
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .touch {
+      width: 340px;
+      h2 {
+        @include font_family(500);
+        font-size: 24px;
+        padding-bottom: 30px;
+      }
+      p {
+        @include font_family(400);
+        font-size: 1rem;
+        padding-bottom: 25px;
+      }
+      form {
+        display: flex;
+        #email {
+          width: 205px;
+          height: 50px;
+          padding-left: 15px;
+          background-color: #f0f1ec;
+          border: none;
+          margin-right: 15px;
+        }
+        .subscribe {
+          width: 118px;
+          height: 50px;
+          color: white;
+          background-color: $Global_color;
+          border: none;
+          @include font_family(500);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .copy {
+    @include font_family(400);
+    font-size: 16px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+}
+
+// Footer End

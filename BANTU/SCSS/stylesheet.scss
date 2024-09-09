@@ -1,0 +1,467 @@
+// Google Font{
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+// }
+
+@mixin location_content {
+  display: grid;
+  grid-template-columns: 30px 300px;
+  padding-bottom: 10px;
+}
+@mixin demo {
+  text-transform: capitalize;
+  width: 140px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #5669ff;
+  border: none;
+  margin-top: 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-family: 600;
+  font-size: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  ul,
+  li,
+  a {
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+// Header Part Start
+header {
+  display: flex;
+  justify-content: space-around;
+  height: 92px;
+  box-shadow: 0 0 10px gray;
+
+  .logo {
+    img {
+      width: 100px;
+      margin-top: 5px;
+    }
+  }
+  menu {
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    ul {
+      padding-top: 25px;
+      li {
+        float: left;
+        a {
+          padding: 20px;
+          color: #656161;
+          &:focus {
+            color: #5669ff;
+          }
+        }
+      }
+    }
+  }
+  .demo {
+    @include demo();
+  }
+}
+// Header Part End
+// Hero_Section Start
+.hero_section {
+  display: flex;
+  min-height: 100vh;
+
+  align-items: center;
+  position: relative;
+  padding-left: 40px;
+
+  .heading_text {
+    h1 {
+      font-size: 52px;
+      line-height: 60px;
+    }
+    p {
+      font-size: 1rem;
+      color: gray;
+      padding: 20px 0;
+    }
+    form {
+      position: relative;
+      input {
+        width: 405px;
+        height: 56px;
+        padding-left: 15px;
+        border: none;
+        box-shadow: 0 0 10px gray;
+        border-radius: 10px;
+      }
+      .arrow {
+        position: absolute;
+        top: 10px;
+        left: 340px;
+        width: 54px;
+        height: 37px;
+        background-color: #5669ff;
+        font-size: 18px;
+        border: none;
+        color: white;
+        border-radius: 10px;
+      }
+    }
+    width: 50%;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    .saling,
+    .warga {
+      color: #5669ff;
+    }
+    .hand {
+      position: absolute;
+      top: 0;
+      left: 340px;
+    }
+  }
+  .image_app {
+    img {
+      width: 350px;
+    }
+  }
+  .welcome {
+    position: absolute;
+    top: 0;
+    right: 150px;
+  }
+  .vitamin {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+// Hero_Section End
+// Card Section Start
+.card-section {
+  padding-bottom: 50px;
+  text-align: center;
+  h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 52px;
+    span {
+      color: #5669ff;
+    }
+  }
+  p {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin: 10px 0;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: space-around;
+    margin-top: 50px;
+    .card_item {
+      text-align: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin: 20px 0;
+      padding: 15px 0;
+      p {
+        text-align: center;
+        color: #656161;
+      }
+    }
+  }
+  .more {
+    width: 143px;
+    height: 43px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5669ff;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+// Card Section End
+// App Section Start
+.app {
+  display: flex;
+  position: relative;
+  margin-left: 200px;
+
+  .img_section {
+    position: relative;
+    img {
+      width: 347px;
+    }
+    .round {
+      width: 300px;
+      height: 250px;
+      background: #5669ff;
+      box-shadow: 0 0 5px 5px #d9ddfb inset;
+      position: absolute;
+      bottom: 16px;
+      left: 25px;
+      z-index: -1;
+      border-radius: 100%;
+    }
+  }
+  .download {
+    position: absolute;
+    top: 80px;
+    left: 450px;
+    h2 {
+      font-size: 52px;
+      padding: 15px 0;
+      .the_app {
+        color: #5669ff;
+      }
+    }
+    p {
+      width: 400px;
+    }
+    .app_store {
+      padding-top: 20px;
+      img {
+        width: 150px;
+      }
+    }
+  }
+}
+.app .download h4 {
+  color: #5669ff;
+}
+.app .download h4::before {
+  content: "| ";
+  color: #5669ff;
+  font-weight: 600;
+}
+// App Section End
+// Covid Information Start
+.covid {
+  padding: 50px;
+  display: flex;
+  .content {
+    .demo {
+      @include demo();
+    }
+    h4 {
+      color: #5669ff;
+      &::before {
+        content: "| ";
+        color: #5669ff;
+        font-weight: 600;
+      }
+    }
+    h2 {
+      font-size: 52px;
+      font-weight: 600;
+      span {
+        color: #5669ff;
+      }
+    }
+    .icon_section {
+      .icon {
+        display: grid;
+        grid-template-columns: 60px 400px;
+      }
+      .icon_content {
+        h5 {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        p {
+          color: #656161;
+        }
+      }
+    }
+  }
+  .location {
+    position: relative;
+    margin-top: 50px;
+    img[alt="location"] {
+      width: 350px;
+      position: absolute;
+      top: 0;
+      left: 195px;
+    }
+    img[alt="map"] {
+      width: 300px;
+      position: absolute;
+      top: 70px;
+      left: 340px;
+      z-index: -1;
+    }
+  }
+}
+// Covid Information End
+// Contact Start
+.contact-info {
+  position: relative;
+  height: 700px;
+  margin-top: 200px;
+  img[alt="top-bg"] {
+    z-index: -1;
+    position: absolute;
+    top: -85px;
+    right: 180px;
+  }
+  img[alt="bottom-bg"] {
+    z-index: -1;
+    position: absolute;
+    bottom: -10px;
+    left: 85px;
+  }
+}
+.contact {
+  width: 950px;
+  height: 650px;
+  margin-top: 150px;
+  margin-left: 150px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+
+  h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #5669ff;
+    text-decoration: underline;
+  }
+  .contact_content {
+    display: flex;
+    margin-top: 20px;
+    padding-left: 80px;
+  }
+  fieldset {
+    width: 320px;
+    padding: 15px;
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: none;
+    }
+  }
+
+  form {
+    width: 450px;
+    margin-top: 47px;
+
+    .email {
+      margin: 15px 0;
+      #email {
+        padding: 10px;
+        width: 319px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+    #text {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      padding-bottom: 80px;
+    }
+    button {
+      display: block;
+      width: 72%;
+      padding: 10px 0;
+      background-color: #5669ff;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.information {
+  line-height: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 50px;
+  a {
+    color: black;
+  }
+  .address {
+    @include location_content();
+  }
+  .mobile {
+    @include location_content();
+  }
+  .mail {
+    @include location_content();
+  }
+  .social_media {
+    padding-bottom: 20px;
+    a {
+      &:first-child {
+        padding-left: 0;
+      }
+      padding: 0 10px;
+      font-size: 19px;
+    }
+  }
+}
+// Contact End
+// Footer Start
+.footer {
+  margin-top: 100px;
+  background-color: #5669ff;
+  padding-top: 70px;
+  color: white;
+  height: 350px;
+  .bottom_footer {
+    display: flex;
+    justify-content: space-between;
+    .footer_icon {
+      margin-left: 50px;
+      a {
+        color: white;
+        padding: 20px 10px;
+      }
+    }
+    p{
+      margin-right: 50px;
+    }
+  }
+}
+footer {
+  display: grid;
+  grid-template-columns: 450px 150px 150px 150px;
+  justify-content: space-around;
+  padding-bottom: 70px;
+  .menu_list {
+    li {
+      h4 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      a {
+        color: black;
+        font-weight: 400;
+        font-size: 20px;
+        color: white;
+      }
+    }
+  }
+}
+// Footer End
